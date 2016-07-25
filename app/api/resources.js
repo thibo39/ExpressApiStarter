@@ -1,15 +1,27 @@
 'use strict';
 
+// Requires
 var Promise = require('promise');
+
+// Resources
+var events = require('./../resources/events.js');
 
 module.exports = {
   event: {
-    get: function(id) {
+    get: events.get,
+    query: events.query,
+    destroy: events.destroy,
+    save: events.save
+  },
+  cat: {
+    get: function (id) {
       return new Promise(function(resolve) {
         resolve({
           id: id,
           name: 'Dolly'
         });
+      }).then( function (data) {
+        return data;
       });
     }
   }
