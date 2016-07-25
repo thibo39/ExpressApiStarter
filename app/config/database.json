@@ -1,0 +1,18 @@
+{
+	"development": {
+		"database": "express-dev",
+		"username": "homestead",
+		"password": "secret",
+		"port": "33060",
+		"chained": "mysql://homesteaddev:secret@localhost:33060/homestead",
+		"dialect": "mysql"
+	}, 
+	"production": {
+		"database": "homestead",
+		"username": "homestead",
+		"password": "secret",
+		"port": "3306",
+		"chained": "mysql://homesteaddev:secret@localhost:3306/homestead",
+		"dialect": "mysql"
+	}
+}
