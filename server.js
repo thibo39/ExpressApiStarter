@@ -35,8 +35,11 @@ app.get('/', function(req, res) {
   res.send('hello world');
 });
 
-// Create Server
-http.createServer(app).listen(80);
+// Set PORT
+var port = process.env.PORT || 80;
+console.log('Server is now running on port ' + port);
+// Listen PORT
+app.listen(port);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
@@ -44,4 +47,3 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
-
