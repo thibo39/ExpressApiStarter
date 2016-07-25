@@ -10,12 +10,12 @@ var session     = require('express-session');
 var http        = require('http');
 var fs          = require('fs');
 
+// Dependencies (files)
+var rest = require('./app/api/rest');
+
 // Init Server
 var app = express();
  
-// Debug for dev 
-//app.use(morgan('combined'))
-
 // Join public rep to use css, img, etc
 app.use(express.static(path.join(__dirname, 'public')));
 // Set parameters
@@ -29,10 +29,8 @@ app.use(bodyParser.raw());
 app.use(bodyParser.json());
 app.use(compression());
 
-
-app.get('/', function(req, res) {
-  res.send('hello world');
-});
+// API RestFull
+app.use('/api', rest);
 
 // Set PORT
 var port = process.env.PORT || 80;
