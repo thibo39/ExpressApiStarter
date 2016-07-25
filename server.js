@@ -2,7 +2,6 @@
 
 // Requires
 var express     = require('express');
-var middleware  = express.Router();
 var bodyParser  = require('body-parser');
 var path        = require('path');
 var compression = require('compression');
