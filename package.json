@@ -31,7 +31,8 @@
     "sass-brunch": "1.9.2",
     "sequelize": "^3.0.1",
     "sequelize-cli": "^2.3.1",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "validate.js": "^0.10.0"
   },
   "devDependencies": {
     "brfs": "^1.2.0",

@@ -23,8 +23,8 @@ var save = function (model) {
 
 // Exporter les méthodes de la resource
 module.exports = {
-	get: load
-	query: loadWhere
-	destroy: remove
+	get: load,
+	query: loadWhere,
+	destroy: remove,
 	save: save
 }
