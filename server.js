@@ -9,8 +9,10 @@ var cookieParser= require('cookie-parser');
 var session     = require('express-session');
 var http        = require('http');
 var fs          = require('fs');
+var browserify  = require('browserify-middleware');
 
 // Dependencies (files)
+var web  = require('./app/api/layout');
 var rest = require('./app/api/rest');
 
 // Init Server
@@ -29,8 +31,12 @@ app.use(bodyParser.raw());
 app.use(bodyParser.json());
 app.use(compression());
 
+// Client 
+app.use(web);
+
 // API RestFull
 app.use('/api', rest);
+app.get('/js/index.js', browserify('./app/index-client.js'));
 
 // Set PORT
 var port = process.env.PORT || 80;

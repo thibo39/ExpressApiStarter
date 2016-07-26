@@ -4,16 +4,16 @@
   "description": "An example of Express for restfull API",
   "author": "David Lepaux <d.lepaux@gmail.com>",
   "license": "MIT",
-  "main": "js/index.js",
+  "main": "index.js",
   "browser": {
-    "./dist/api/store/index.js": "./dist/api/store/client.js",
-    "./dist/api/storeProtected/index.js": "./dist/api/storeProtected/client.js"
+    "./app/store/index.js": "./app/store/client.js"
   },
   "scripts": {
-    "dev": "npm run compile && brunch w"
+    "prod": "NODE_ENV=production PORT=80 node server"
   },
   "dependencies": {
     "body-parser": "^1.10.1",
+    "browserify-middleware": "^4.1.0",
     "compression": "^1.3.0",
     "connect-flash": "0.1.x",
     "cookie-parser": "^1.4.1",
@@ -24,9 +24,15 @@
     "js-cookie": "^2.1.1",
     "lodash": "^2.4.1",
     "mysql": "^2.10.2",
+    "mithril": "^0.2.0",
+    "mithril-node-render": "^0.4.2",
     "promise": "^6.1.0",
     "sequelize": "^3.0.1",
     "sequelize-cli": "^2.3.1",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "brfs": "^1.2.0",
+    "browserify": "^8.1.1"
   }
 }
