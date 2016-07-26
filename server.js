@@ -36,6 +36,8 @@ app.use(web);
 
 // API RestFull
 app.use('/api', rest);
+
+// Set JS deps
 app.get('/js/index.js', browserify('./app/index-client.js'));
 
 // Set PORT

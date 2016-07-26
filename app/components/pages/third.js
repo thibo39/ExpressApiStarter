@@ -42,12 +42,14 @@ function view(scope) {
         return m('option', event.title);
       })
     ]),
-    m('form', {method: 'POST', action: '#', onsubmit: maFonction}, [ 
-      m('input',{type:'text',name:'title'}),
-      m('input',{type:'text',name:'description'}),
-      m('input',{type:'text',name:'date_start'}),
-      m('input',{type:'text',name:'date_stop'}),
-      m('button',{type:'submit'},'OK')
+    m('form', {class: 'pure-form', method: 'POST', action: '#', onsubmit: maFonction}, [ 
+      m('fieldset', [
+        m('input',{type:'text',name:'title'}),
+        m('input',{type:'text',name:'description'}),
+        m('input',{type:'text',name:'date_start'}),
+        m('input',{type:'text',name:'date_stop'}),
+        m('button', {id: 'btn', class:'pure-button', type:'submit'},'OK')
+      ])
     ])
   ];
 }
