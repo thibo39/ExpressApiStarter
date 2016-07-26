@@ -38,7 +38,8 @@ CREATE TABLE `events` (
 
 LOCK TABLES `events` WRITE;
 /*!40000 ALTER TABLE `events` DISABLE KEYS */;
-INSERT INTO `events` VALUES (1,'Event test','2016-06-03 23:00:00','2016-06-03 23:00:00','Lorem Ipsum Dolor');
+INSERT INTO `events` VALUES (1,'Event test1','2016-06-03 23:00:00','2016-06-03 23:00:00','Lorem Ipsum Dolor');
+INSERT INTO `events` VALUES (2,'Event test2','2016-06-03 23:00:00','2016-06-03 23:00:00','Lorem Ipsum Dolor');
 /*!40000 ALTER TABLE `events` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -24,5 +24,17 @@ module.exports = {
         return data;
       });
     }
+  },
+  dog: {
+    get: function (id) {
+      return new Promise(function(resolve) {
+        resolve({
+          id: id,
+          name: 'Doggy'
+        });
+      }).then( function (data) {
+        return data;
+      });
+    }
   }
 };

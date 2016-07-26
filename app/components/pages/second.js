@@ -21,6 +21,10 @@ function view(scope) {
       href: '/',
       config: m.route
     }, 'back to home page'),
+    m('a', {
+      href: '/third-page',
+      config: m.route
+    }, 'back to third page'),
     m('p', scope.myDog && ('My dogs name is ' + scope.myDog.name) || '')
   ];
 }

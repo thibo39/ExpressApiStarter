@@ -4,7 +4,7 @@ var extend = require('lodash').extend;
 var m = require('mithril');
 
 function apiUrl(type) {
-  return '/api/v1/' + type;
+  return '/api/' + type;
 }
 
 function save(instance) {
